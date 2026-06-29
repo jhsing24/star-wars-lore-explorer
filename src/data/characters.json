@@ -141,7 +141,7 @@
     "summary": "A Kel Dor Jedi Master and valued member of the Jedi High Council, known for his skill as a pilot and his compassion for his clone troopers. He discovered Ahsoka Tano as a child on Shili and sponsored her entry into the Jedi Order.",
     "wookieepedia_slug": "Plo_Koon",
     "rarity": "rare",
-    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "npc_dialogue" }
   },
   {
     "id": "char_kit_fisto",
@@ -168,7 +168,7 @@
     "summary": "The Viceroy and First Chairman of Alderaan and a senator in the Galactic Republic. He was a founding member of the Alliance to Restore the Republic and adopted Leia Skywalker as his daughter following the rise of the Empire.",
     "wookieepedia_slug": "Bail_Organa",
     "rarity": "rare",
-    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "npc_dialogue" }
   },
   {
     "id": "char_mon_mothma",
@@ -177,7 +177,7 @@
     "summary": "A senator from Chandrila who became a vocal critic of Supreme Chancellor Palpatine's increasing emergency powers. She co-authored the Delegation of 2000 petition opposing Palpatine's policies and later became a founder of the Rebel Alliance.",
     "wookieepedia_slug": "Mon_Mothma",
     "rarity": "rare",
-    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+    "unlock_condition": { "planet": "mandalore", "trigger": "npc_dialogue" }
   },
   {
     "id": "char_wilhuff_tarkin",
@@ -186,7 +186,7 @@
     "summary": "An ambitious officer from Eriadu who rose through the Republic Navy during the Clone Wars, becoming one of Chancellor Palpatine's most trusted commanders. He developed the Tarkin Doctrine of rule through fear, which shaped the early Empire's military strategy.",
     "wookieepedia_slug": "Wilhuff_Tarkin",
     "rarity": "rare",
-    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+    "unlock_condition": { "planet": "christophsis", "trigger": "terminal" }
   },
   {
     "id": "char_ahsoka_tano",
@@ -222,7 +222,7 @@
     "summary": "A Duros bounty hunter widely regarded as the best in the galaxy following Jango Fett's death. He worked for Jabba the Hutt and Darth Sidious during the Clone Wars, carrying out high-profile jobs including stealing a Jedi holocron from the Jedi Temple.",
     "wookieepedia_slug": "Cad_Bane",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+    "unlock_condition": { "planet": "mandalore", "trigger": "npc_dialogue" }
   },
   {
     "id": "char_watto",

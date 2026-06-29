@@ -51,7 +51,7 @@
     "summary": "Following the First Battle of Geonosis in 22 BBY, the Galactic Republic and the Confederacy of Independent Systems entered open armed conflict. Chancellor Palpatine was granted emergency powers to deploy the newly discovered Grand Army of the Republic.",
     "wookieepedia_slug": "Clone_Wars",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+    "unlock_condition": { "planet": "mandalore", "trigger": "terminal" }
   },
   {
     "id": "event_battle_christophsis",
@@ -114,7 +114,7 @@
     "summary": "A secret clone protocol issued by Supreme Chancellor Palpatine in 19 BBY that triggered inhibitor chips in clone troopers' brains, compelling them to execute their Jedi commanders as traitors. The order nearly wiped out the Jedi Order.",
     "wookieepedia_slug": "Order_66",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "terminal" }
   },
   {
     "id": "event_declaration_new_order",
@@ -150,6 +150,6 @@
     "summary": "Darth Vader led the 501st Legion in a massacre of the Jedi Temple's occupants in 19 BBY as part of Order 66, killing Jedi Knights and younglings alike. The attack was a key step in eradicating the Jedi Order.",
     "wookieepedia_slug": "Attack_on_the_Jedi_Temple",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "coruscant", "trigger": "artifact" }
+    "unlock_condition": { "planet": "mandalore", "trigger": "artifact" }
   }
 ]

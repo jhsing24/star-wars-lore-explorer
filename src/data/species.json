@@ -69,7 +69,7 @@
     "summary": "A winged species from the swamp world of Toydaria whose minds were naturally resistant to Force manipulation, including Jedi mind tricks. Toydarians were common merchants and traders throughout the Outer Rim.",
     "wookieepedia_slug": "Toydarian",
     "rarity": "common",
-    "unlock_condition": { "planet": "tatooine", "trigger": "artifact" }
+    "unlock_condition": { "planet": "ryloth", "trigger": "artifact" }
   },
   {
     "id": "species_dug",
@@ -78,7 +78,7 @@
     "summary": "A four-limbed species from the world of Malastare who walked on their upper limbs and used their lower limbs as arms. Dugs were known for an aggressive temperament and were famous as skilled podracers.",
     "wookieepedia_slug": "Dug",
     "rarity": "common",
-    "unlock_condition": { "planet": "tatooine", "trigger": "artifact" }
+    "unlock_condition": { "planet": "rodia", "trigger": "artifact" }
   },
   {
     "id": "species_neimoidian",
@@ -87,7 +87,7 @@
     "summary": "A humanoid species evolved from the Duros who controlled the Trade Federation and were known for their acquisitive nature and cowardice in direct conflict. Neimoidians spoke in distinctive accents and wore elaborate robes and headwear.",
     "wookieepedia_slug": "Neimoidian",
     "rarity": "common",
-    "unlock_condition": { "planet": "naboo", "trigger": "artifact" }
+    "unlock_condition": { "planet": "mustafar", "trigger": "artifact" }
   },
   {
     "id": "species_zabrak",
@@ -159,7 +159,7 @@
     "summary": "A species from the high-gravity world of Dorin, requiring breath masks when in oxygen-rich atmospheres to survive. Kel Dor were known for their strong connection to the Force and their black eyes, with Jedi Master Plo Koon being their most prominent representative.",
     "wookieepedia_slug": "Kel_Dor",
     "rarity": "common",
-    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "terminal" }
   },
   {
     "id": "species_pau_an",

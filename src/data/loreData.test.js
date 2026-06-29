@@ -35,4 +35,13 @@ describe('seed lore data', () => {
   it('only uses known categories', () => {
     expect(allLore.every(e => CATEGORIES.includes(e.category))).toBe(true)
   })
+
+  it('distributes 4..8 entries to every canonical planet', () => {
+    const counts = Object.fromEntries(PLANET_IDS.map(p => [p, 0]))
+    for (const e of allLore) counts[e.unlock_condition.planet]++
+    for (const p of PLANET_IDS) {
+      expect(counts[p], `${p} entry count`).toBeGreaterThanOrEqual(4)
+      expect(counts[p], `${p} entry count`).toBeLessThanOrEqual(8)
+    }
+  })
 })

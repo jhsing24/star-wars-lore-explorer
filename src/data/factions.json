@@ -6,7 +6,7 @@
     "summary": "A democratic union of thousands of star systems that governed the galaxy for over a thousand years before the Clone Wars. The Republic was administered by a Senate on Coruscant and protected by the Jedi Order until its transformation into the Galactic Empire.",
     "wookieepedia_slug": "Galactic_Republic",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+    "unlock_condition": { "planet": "kamino", "trigger": "terminal" }
   },
   {
     "id": "faction_confederacy",
@@ -15,7 +15,7 @@
     "summary": "A secessionist alliance of star systems that broke from the Galactic Republic, led by Count Dooku and secretly controlled by Darth Sidious. The Confederacy's military backbone was the Separatist Droid Army, manufactured by member corporations.",
     "wookieepedia_slug": "Confederacy_of_Independent_Systems",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "geonosis", "trigger": "terminal" }
+    "unlock_condition": { "planet": "mustafar", "trigger": "terminal" }
   },
   {
     "id": "faction_jedi_order",
@@ -33,7 +33,7 @@
     "summary": "A dark side order that followed the Rule of Two, with only a Master and an apprentice existing at any given time. During the prequel era the Sith operated in secret, with Darth Sidious and Darth Maul—then Darth Tyranus—guiding events toward galactic domination.",
     "wookieepedia_slug": "Sith",
     "rarity": "legendary",
-    "unlock_condition": { "planet": "coruscant", "trigger": "artifact" }
+    "unlock_condition": { "planet": "mustafar", "trigger": "artifact" }
   },
   {
     "id": "faction_galactic_senate",
@@ -42,7 +42,7 @@
     "summary": "The legislative body of the Galactic Republic, composed of senators representing thousands of member worlds. During the Clone Wars its powers were increasingly concentrated in the office of Supreme Chancellor Palpatine until he declared himself Emperor.",
     "wookieepedia_slug": "Galactic_Senate",
     "rarity": "rare",
-    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+    "unlock_condition": { "planet": "ryloth", "trigger": "npc_dialogue" }
   },
   {
     "id": "faction_trade_federation",
@@ -51,7 +51,7 @@
     "summary": "A powerful commerce guild that controlled shipping lanes throughout the galaxy. Under Viceroy Nute Gunray's leadership it blockaded and invaded Naboo at Darth Sidious's behest, later joining the Separatist Alliance.",
     "wookieepedia_slug": "Trade_Federation",
     "rarity": "rare",
-    "unlock_condition": { "planet": "naboo", "trigger": "terminal" }
+    "unlock_condition": { "planet": "rodia", "trigger": "terminal" }
   },
   {
     "id": "faction_techno_union",

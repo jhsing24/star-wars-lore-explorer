@@ -1,0 +1,110 @@
+[
+  {
+    "id": "planet_coruscant",
+    "title": "Coruscant",
+    "category": "planets",
+    "summary": "An ecumenopolis at the heart of the galaxy whose entire surface is covered by sprawling city. It served as the capital of the Galactic Republic and seat of the Senate and the Jedi Order.",
+    "wookieepedia_slug": "Coruscant",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_naboo",
+    "title": "Naboo",
+    "category": "planets",
+    "summary": "A peaceful Mid Rim world of rolling hills and lakes, home to both the human Naboo and the aquatic Gungans. It was the homeworld of Padmé Amidala and Senator Palpatine.",
+    "wookieepedia_slug": "Naboo",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "naboo", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_kamino",
+    "title": "Kamino",
+    "category": "planets",
+    "summary": "A stormy ocean world located beyond the Outer Rim, home to the Kaminoan cloners who produced the Grand Army of the Republic. The planet's existence was erased from the Jedi Archives by Count Dooku.",
+    "wookieepedia_slug": "Kamino",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "kamino", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_geonosis",
+    "title": "Geonosis",
+    "category": "planets",
+    "summary": "An arid, rocky Outer Rim world orbiting close to Tatooine, home to the insectoid Geonosians. It was the site of the first battle of the Clone Wars and the location of the droid foundries of the Separatist Alliance.",
+    "wookieepedia_slug": "Geonosis",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "geonosis", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_kashyyyk",
+    "title": "Kashyyyk",
+    "category": "planets",
+    "summary": "A forested Mid Rim planet covered in immense wroshyr trees, homeworld of the Wookiee species. During the Clone Wars, Kashyyyk was defended by Jedi Master Yoda alongside Wookiee warriors against a Separatist invasion.",
+    "wookieepedia_slug": "Kashyyyk",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_mustafar",
+    "title": "Mustafar",
+    "category": "planets",
+    "summary": "A volcanic Outer Rim world of lava rivers and toxic atmosphere, used by the Separatists as a retreat. It was the site of the fateful duel between Obi-Wan Kenobi and Anakin Skywalker that left Anakin horrifically burned.",
+    "wookieepedia_slug": "Mustafar",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "mustafar", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_utapau",
+    "title": "Utapau",
+    "category": "planets",
+    "summary": "A sinkhole-dotted Outer Rim world whose inhabitants, the Pau'ans and Utai, live in the cliff-sides of enormous pits. Obi-Wan Kenobi tracked General Grievous here, triggering the Battle of Utapau.",
+    "wookieepedia_slug": "Utapau",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "utapau", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_tatooine",
+    "title": "Tatooine",
+    "category": "planets",
+    "summary": "A harsh desert world orbiting twin suns in the Outer Rim, largely controlled by the Hutt crime syndicates. It was the homeworld of Anakin Skywalker and the site of the Boonta Eve Classic Podrace.",
+    "wookieepedia_slug": "Tatooine",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_mandalore",
+    "title": "Mandalore",
+    "category": "planets",
+    "summary": "A war-ravaged Outer Rim world whose surface was rendered largely uninhabitable by centuries of conflict. During the Clone Wars its pacifist New Mandalorians ruled from the domed city of Sundari while Death Watch sought to restore the warrior tradition.",
+    "wookieepedia_slug": "Mandalore",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "mandalore", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_ryloth",
+    "title": "Ryloth",
+    "category": "planets",
+    "summary": "A tidally locked Outer Rim world, homeworld of the Twi'lek species. During the Clone Wars it was occupied by Separatist forces under Wat Tambor, and liberated by Republic forces including Jedi Generals Windu and Secura.",
+    "wookieepedia_slug": "Ryloth",
+    "rarity": "common",
+    "unlock_condition": { "planet": "ryloth", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_christophsis",
+    "title": "Christophsis",
+    "category": "planets",
+    "summary": "A crystalline Outer Rim world covered in giant crystal formations, blockaded and occupied by Separatist forces early in the Clone Wars. The Battle of Christophsis was also the first meeting of Anakin Skywalker and his Padawan Ahsoka Tano.",
+    "wookieepedia_slug": "Christophsis",
+    "rarity": "common",
+    "unlock_condition": { "planet": "christophsis", "trigger": "landmark" }
+  },
+  {
+    "id": "planet_rodia",
+    "title": "Rodia",
+    "category": "planets",
+    "summary": "A jungle world in the Tyrius system, homeworld of the Rodian species. During the Clone Wars, Senator Onaconda Farr was pressured by Nute Gunray to hand Padmé Amidala over to the Separatists.",
+    "wookieepedia_slug": "Rodia",
+    "rarity": "common",
+    "unlock_condition": { "planet": "rodia", "trigger": "landmark" }
+  }
+]

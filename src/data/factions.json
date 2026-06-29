@@ -1,0 +1,110 @@
+[
+  {
+    "id": "faction_galactic_republic",
+    "title": "Galactic Republic",
+    "category": "factions",
+    "summary": "A democratic union of thousands of star systems that governed the galaxy for over a thousand years before the Clone Wars. The Republic was administered by a Senate on Coruscant and protected by the Jedi Order until its transformation into the Galactic Empire.",
+    "wookieepedia_slug": "Galactic_Republic",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_confederacy",
+    "title": "Confederacy of Independent Systems",
+    "category": "factions",
+    "summary": "A secessionist alliance of star systems that broke from the Galactic Republic, led by Count Dooku and secretly controlled by Darth Sidious. The Confederacy's military backbone was the Separatist Droid Army, manufactured by member corporations.",
+    "wookieepedia_slug": "Confederacy_of_Independent_Systems",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "geonosis", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_jedi_order",
+    "title": "Jedi Order",
+    "category": "factions",
+    "summary": "An ancient monastic peacekeeping organization unified by its belief in and observance of the light side of the Force. During the final years of the Republic the Order was led by a High Council based on Coruscant.",
+    "wookieepedia_slug": "Jedi_Order",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_sith",
+    "title": "Sith",
+    "category": "factions",
+    "summary": "A dark side order that followed the Rule of Two, with only a Master and an apprentice existing at any given time. During the prequel era the Sith operated in secret, with Darth Sidious and Darth Maul—then Darth Tyranus—guiding events toward galactic domination.",
+    "wookieepedia_slug": "Sith",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "artifact" }
+  },
+  {
+    "id": "faction_galactic_senate",
+    "title": "Galactic Senate",
+    "category": "factions",
+    "summary": "The legislative body of the Galactic Republic, composed of senators representing thousands of member worlds. During the Clone Wars its powers were increasingly concentrated in the office of Supreme Chancellor Palpatine until he declared himself Emperor.",
+    "wookieepedia_slug": "Galactic_Senate",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "faction_trade_federation",
+    "title": "Trade Federation",
+    "category": "factions",
+    "summary": "A powerful commerce guild that controlled shipping lanes throughout the galaxy. Under Viceroy Nute Gunray's leadership it blockaded and invaded Naboo at Darth Sidious's behest, later joining the Separatist Alliance.",
+    "wookieepedia_slug": "Trade_Federation",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "naboo", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_techno_union",
+    "title": "Techno Union",
+    "category": "factions",
+    "summary": "An influential commerce guild specializing in technology and manufacturing, led by Foreman Wat Tambor. The Techno Union pledged its droid forces to the Confederacy of Independent Systems at Geonosis and supplied battle droids throughout the Clone Wars.",
+    "wookieepedia_slug": "Techno_Union",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "geonosis", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_banking_clan",
+    "title": "InterGalactic Banking Clan",
+    "category": "factions",
+    "summary": "One of the most powerful financial institutions in the galaxy, led by San Hill. The Banking Clan financed the Separatist war effort and contributed its own private droid armies to the Confederacy of Independent Systems.",
+    "wookieepedia_slug": "InterGalactic_Banking_Clan",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "mustafar", "trigger": "terminal" }
+  },
+  {
+    "id": "faction_death_watch",
+    "title": "Death Watch",
+    "category": "factions",
+    "summary": "A Mandalorian terrorist splinter group that sought to overthrow the pacifist New Mandalorian government and restore their people's ancient warrior traditions. They were led by Pre Vizsla and allied briefly with Count Dooku's Separatists.",
+    "wookieepedia_slug": "Death_Watch",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "mandalore", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "faction_hutt_cartel",
+    "title": "Hutt Cartel",
+    "category": "factions",
+    "summary": "A vast criminal syndicate controlled by the Hutt species that dominated the Outer Rim's underworld. The Hutts maintained a powerful network of smugglers, bounty hunters, and enforcers, with Jabba the Hutt operating from Tatooine.",
+    "wookieepedia_slug": "Hutt_Clan",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "faction_501st_legion",
+    "title": "501st Legion",
+    "category": "factions",
+    "summary": "An elite clone trooper unit within the Grand Army of the Republic, serving under Jedi General Anakin Skywalker and Clone Commander Rex. The 501st participated in numerous major battles of the Clone Wars and ultimately carried out Order 66.",
+    "wookieepedia_slug": "501st_Legion",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "christophsis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "faction_grand_army_republic",
+    "title": "Grand Army of the Republic",
+    "category": "factions",
+    "summary": "The clone trooper military force commissioned by the Galactic Republic to fight the Clone Wars. Created from the genetic template of bounty hunter Jango Fett on Kamino, the Grand Army was activated following the First Battle of Geonosis.",
+    "wookieepedia_slug": "Grand_Army_of_the_Republic",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "kamino", "trigger": "terminal" }
+  }
+]

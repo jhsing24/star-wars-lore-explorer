@@ -1,0 +1,182 @@
+[
+  {
+    "id": "species_human",
+    "title": "Human",
+    "category": "species",
+    "summary": "The most populous species in the galaxy, found on thousands of worlds across all regions. Humans dominated the Galactic Republic's politics and military, and were uniquely capable of producing Force-sensitives at a higher rate than many species.",
+    "wookieepedia_slug": "Human",
+    "rarity": "common",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "species_gungan",
+    "title": "Gungan",
+    "category": "species",
+    "summary": "An amphibious species native to the swamps and lakes of Naboo, living in underwater cities hidden from the Naboo humans above. Gungans possessed a unique plasma-based technology and maintained a formidable army, the Gungan Grand Army.",
+    "wookieepedia_slug": "Gungan",
+    "rarity": "common",
+    "unlock_condition": { "planet": "naboo", "trigger": "terminal" }
+  },
+  {
+    "id": "species_twilek",
+    "title": "Twi'lek",
+    "category": "species",
+    "summary": "A humanoid species from Ryloth distinguished by their colorful skin and twin head-tails called lekku that contained fatty deposits storing memories and emotions. Twi'leks were common throughout the galaxy, often found as entertainers, slaves, or freedom fighters.",
+    "wookieepedia_slug": "Twi'lek",
+    "rarity": "common",
+    "unlock_condition": { "planet": "ryloth", "trigger": "terminal" }
+  },
+  {
+    "id": "species_wookiee",
+    "title": "Wookiee",
+    "category": "species",
+    "summary": "A tall, strong, fur-covered species from the forest world of Kashyyyk, known for their fierce loyalty and terrifying strength. Wookiees spoke Shyriiwook, a series of growls, and were prized as slaves by the Empire after Order 66.",
+    "wookieepedia_slug": "Wookiee",
+    "rarity": "common",
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "terminal" }
+  },
+  {
+    "id": "species_kaminoan",
+    "title": "Kaminoan",
+    "category": "species",
+    "summary": "A tall, long-necked amphibious species native to the ocean world of Kamino, renowned across the galaxy for their mastery of cloning technology. The Kaminoans produced the entire Grand Army of the Republic over a decade of secret development.",
+    "wookieepedia_slug": "Kaminoan",
+    "rarity": "common",
+    "unlock_condition": { "planet": "kamino", "trigger": "terminal" }
+  },
+  {
+    "id": "species_geonosian",
+    "title": "Geonosian",
+    "category": "species",
+    "summary": "An insectoid species from the rocky world of Geonosis that lived in hive-like caste societies. Geonosians were master engineers who designed and manufactured battle droids for the Separatist Alliance in vast underground foundries.",
+    "wookieepedia_slug": "Geonosian",
+    "rarity": "common",
+    "unlock_condition": { "planet": "geonosis", "trigger": "terminal" }
+  },
+  {
+    "id": "species_hutt",
+    "title": "Hutt",
+    "category": "species",
+    "summary": "A large, slug-like species from Nal Hutta that dominated organized crime in the Outer Rim through their powerful criminal syndicate. Hutts were long-lived, immune to many toxins, and considered themselves above galactic law.",
+    "wookieepedia_slug": "Hutt",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "terminal" }
+  },
+  {
+    "id": "species_toydarian",
+    "title": "Toydarian",
+    "category": "species",
+    "summary": "A winged species from the swamp world of Toydaria whose minds were naturally resistant to Force manipulation, including Jedi mind tricks. Toydarians were common merchants and traders throughout the Outer Rim.",
+    "wookieepedia_slug": "Toydarian",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "artifact" }
+  },
+  {
+    "id": "species_dug",
+    "title": "Dug",
+    "category": "species",
+    "summary": "A four-limbed species from the world of Malastare who walked on their upper limbs and used their lower limbs as arms. Dugs were known for an aggressive temperament and were famous as skilled podracers.",
+    "wookieepedia_slug": "Dug",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "artifact" }
+  },
+  {
+    "id": "species_neimoidian",
+    "title": "Neimoidian",
+    "category": "species",
+    "summary": "A humanoid species evolved from the Duros who controlled the Trade Federation and were known for their acquisitive nature and cowardice in direct conflict. Neimoidians spoke in distinctive accents and wore elaborate robes and headwear.",
+    "wookieepedia_slug": "Neimoidian",
+    "rarity": "common",
+    "unlock_condition": { "planet": "naboo", "trigger": "artifact" }
+  },
+  {
+    "id": "species_zabrak",
+    "title": "Zabrak",
+    "category": "species",
+    "summary": "A near-human species from Iridonia distinguished by their crown of vestigial horns and facial tattoos. Zabraks were known for their fierce independence and mental fortitude, and counted Darth Maul among their most infamous members.",
+    "wookieepedia_slug": "Zabrak",
+    "rarity": "common",
+    "unlock_condition": { "planet": "naboo", "trigger": "artifact" }
+  },
+  {
+    "id": "species_mon_calamari",
+    "title": "Mon Calamari",
+    "category": "species",
+    "summary": "An amphibious species from the ocean world of Mon Cala, known for their exceptional shipbuilding skills. Mon Calamari vessels were among the finest in the galaxy, and members of the species, like Admiral Ackbar, became key figures in the Rebel Alliance.",
+    "wookieepedia_slug": "Mon_Calamari",
+    "rarity": "common",
+    "unlock_condition": { "planet": "rodia", "trigger": "terminal" }
+  },
+  {
+    "id": "species_rodian",
+    "title": "Rodian",
+    "category": "species",
+    "summary": "A green-skinned humanoid species from the jungle world of Rodia, identifiable by their multifaceted eyes and snout-like noses. Rodians were renowned as bounty hunters and trackers, with hunting deeply embedded in their culture.",
+    "wookieepedia_slug": "Rodian",
+    "rarity": "common",
+    "unlock_condition": { "planet": "rodia", "trigger": "terminal" }
+  },
+  {
+    "id": "species_besalisk",
+    "title": "Besalisk",
+    "category": "species",
+    "summary": "A large, four-armed humanoid species from the frigid world of Ojom. The most notable Besalisk of the Clone Wars era was Dexter Jettster, an old friend of Obi-Wan Kenobi who ran a diner on Coruscant and identified the Kamino saberdart.",
+    "wookieepedia_slug": "Besalisk",
+    "rarity": "common",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "species_nautolan",
+    "title": "Nautolan",
+    "category": "species",
+    "summary": "An amphibious species from the ocean world of Glee Anselm, distinguished by their large black eyes and long head-tails that could sense pheromones and emotions. Kit Fisto was one of the most prominent Nautolans during the Clone Wars.",
+    "wookieepedia_slug": "Nautolan",
+    "rarity": "common",
+    "unlock_condition": { "planet": "kamino", "trigger": "artifact" }
+  },
+  {
+    "id": "species_cerean",
+    "title": "Cerean",
+    "category": "species",
+    "summary": "A near-human species from Cerea with enlarged conical heads that housed a binary brain, giving them exceptional cognitive and analytical abilities. Jedi Master Ki-Adi-Mundi was among the most prominent Cereans of the prequel era.",
+    "wookieepedia_slug": "Cerean",
+    "rarity": "common",
+    "unlock_condition": { "planet": "geonosis", "trigger": "artifact" }
+  },
+  {
+    "id": "species_togruta",
+    "title": "Togruta",
+    "category": "species",
+    "summary": "A humanoid species from the world of Shili with striped skin and large hollow montrals and head-tails called lekku. Togruta had a passive echolocation ability from their montrals, and Ahsoka Tano was the most famous Togruta of the Clone Wars.",
+    "wookieepedia_slug": "Togruta",
+    "rarity": "common",
+    "unlock_condition": { "planet": "christophsis", "trigger": "artifact" }
+  },
+  {
+    "id": "species_kel_dor",
+    "title": "Kel Dor",
+    "category": "species",
+    "summary": "A species from the high-gravity world of Dorin, requiring breath masks when in oxygen-rich atmospheres to survive. Kel Dor were known for their strong connection to the Force and their black eyes, with Jedi Master Plo Koon being their most prominent representative.",
+    "wookieepedia_slug": "Kel_Dor",
+    "rarity": "common",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "species_pau_an",
+    "title": "Pau'an",
+    "category": "species",
+    "summary": "A tall, gaunt near-human species native to the sinkhole world of Utapau, distinguished by their pale, ridged skin and sunken eyes. Pau'ans were the ruling caste of Utapau alongside the shorter Utai laborers, and served as administrators under Separatist occupation.",
+    "wookieepedia_slug": "Pau'an",
+    "rarity": "common",
+    "unlock_condition": { "planet": "utapau", "trigger": "terminal" }
+  },
+  {
+    "id": "species_mandalorian",
+    "title": "Mandalorian (Culture)",
+    "category": "species",
+    "summary": "Not a single species but a warrior culture originating on Mandalore, united by a shared creed and iconic beskar armor. During the Clone Wars, Mandalorian society was divided between the pacifist New Mandalorians and the traditionalist Death Watch faction.",
+    "wookieepedia_slug": "Mandalorian",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "mandalore", "trigger": "terminal" }
+  }
+]

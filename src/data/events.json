@@ -1,0 +1,155 @@
+[
+  {
+    "id": "event_invasion_naboo",
+    "title": "Invasion of Naboo",
+    "category": "events",
+    "summary": "The Trade Federation blockaded and occupied Naboo in 32 BBY in protest of taxation of the trade routes, secretly directed by Darth Sidious. The invasion ended after the Battle of Naboo.",
+    "wookieepedia_slug": "Invasion_of_Naboo",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "naboo", "trigger": "landmark" }
+  },
+  {
+    "id": "event_battle_naboo",
+    "title": "Battle of Naboo",
+    "category": "events",
+    "summary": "The climactic battle that ended the Trade Federation's occupation of Naboo in 32 BBY. Queen Amidala recaptured Theed palace, Gungans fought droid forces on the plains, and Obi-Wan Kenobi slew Darth Maul in the palace's generator complex.",
+    "wookieepedia_slug": "Battle_of_Naboo",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "naboo", "trigger": "landmark" }
+  },
+  {
+    "id": "event_boonta_eve_classic",
+    "title": "Boonta Eve Classic",
+    "category": "events",
+    "summary": "An annual podrace held in the Mos Espa Grand Arena on Tatooine in 32 BBY. The nine-year-old slave Anakin Skywalker won the race in a heavily modified Radon-Ulzer podracer, earning his freedom and the right to travel off-world with Qui-Gon Jinn.",
+    "wookieepedia_slug": "Boonta_Eve_Classic",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "landmark" }
+  },
+  {
+    "id": "event_assassination_padme",
+    "title": "Assassination Attempts on Padmé Amidala",
+    "category": "events",
+    "summary": "Multiple attempts on Senator Padmé Amidala's life in 22 BBY, orchestrated by Nute Gunray through bounty hunter Zam Wesell and ultimately Jango Fett. The attempts prompted Obi-Wan Kenobi to trace a saberdart to Kamino, uncovering the clone army.",
+    "wookieepedia_slug": "Assassination_attempt_on_Padmé_Amidala_on_Coruscant",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "artifact" }
+  },
+  {
+    "id": "event_first_battle_geonosis",
+    "title": "First Battle of Geonosis",
+    "category": "events",
+    "summary": "The opening battle of the Clone Wars in 22 BBY, ignited when Mace Windu led 212 Jedi to rescue Obi-Wan Kenobi, Anakin Skywalker, and Padmé Amidala from execution in the Geonosian arena. Republic clone forces arrived to turn the tide.",
+    "wookieepedia_slug": "First_Battle_of_Geonosis",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "geonosis", "trigger": "landmark" }
+  },
+  {
+    "id": "event_outbreak_clone_wars",
+    "title": "Outbreak of the Clone Wars",
+    "category": "events",
+    "summary": "Following the First Battle of Geonosis in 22 BBY, the Galactic Republic and the Confederacy of Independent Systems entered open armed conflict. Chancellor Palpatine was granted emergency powers to deploy the newly discovered Grand Army of the Republic.",
+    "wookieepedia_slug": "Clone_Wars",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "event_battle_christophsis",
+    "title": "Battle of Christophsis",
+    "category": "events",
+    "summary": "An early Clone Wars engagement in which Republic forces under Anakin Skywalker and Obi-Wan Kenobi broke a Separatist blockade and occupation of the crystal world Christophsis. This battle also marked the debut of Ahsoka Tano as Anakin's new Padawan.",
+    "wookieepedia_slug": "Battle_of_Christophsis",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "christophsis", "trigger": "landmark" }
+  },
+  {
+    "id": "event_battle_kamino",
+    "title": "Battle of Kamino",
+    "category": "events",
+    "summary": "A Separatist assault on the cloning facilities of Kamino, intended to cripple the Republic's ability to produce clone troopers. Obi-Wan Kenobi, Anakin Skywalker, and local defenders repelled the invasion led by Asajj Ventress and General Grievous.",
+    "wookieepedia_slug": "Battle_of_Kamino",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "kamino", "trigger": "landmark" }
+  },
+  {
+    "id": "event_battle_ryloth",
+    "title": "Battle of Ryloth",
+    "category": "events",
+    "summary": "A major Clone Wars campaign in 21 BBY to liberate the Twi'lek homeworld from Separatist occupation under Wat Tambor. Republic forces under Jedi Generals Windu, Secura, and Kenobi fought alongside Twi'lek freedom fighters led by Cham Syndulla.",
+    "wookieepedia_slug": "Battle_of_Ryloth",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "ryloth", "trigger": "landmark" }
+  },
+  {
+    "id": "event_siege_mandalore",
+    "title": "Siege of Mandalore",
+    "category": "events",
+    "summary": "A late-Clone Wars campaign in 19 BBY in which Ahsoka Tano and Republic forces besieged the Mandalorian capital of Sundari to capture Darth Maul. The siege coincided with the execution of Order 66 and the end of the Clone Wars.",
+    "wookieepedia_slug": "Siege_of_Mandalore",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "mandalore", "trigger": "landmark" }
+  },
+  {
+    "id": "event_battle_utapau",
+    "title": "Battle of Utapau",
+    "category": "events",
+    "summary": "Obi-Wan Kenobi led Republic forces to the sinkhole world of Utapau in 19 BBY, where he killed General Grievous in single combat. The battle was cut short when clone troopers received Order 66 and turned on their Jedi commanders.",
+    "wookieepedia_slug": "Battle_of_Utapau",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "utapau", "trigger": "landmark" }
+  },
+  {
+    "id": "event_battle_kashyyyk",
+    "title": "Battle of Kashyyyk",
+    "category": "events",
+    "summary": "A Separatist invasion of the Wookiee homeworld in 19 BBY that was repelled by Yoda leading clone troopers and Wookiee warriors. Yoda narrowly survived Order 66 when loyalists helped him escape from Kashyyyk.",
+    "wookieepedia_slug": "Battle_of_Kashyyyk",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "landmark" }
+  },
+  {
+    "id": "event_order_66",
+    "title": "Order 66",
+    "category": "events",
+    "summary": "A secret clone protocol issued by Supreme Chancellor Palpatine in 19 BBY that triggered inhibitor chips in clone troopers' brains, compelling them to execute their Jedi commanders as traitors. The order nearly wiped out the Jedi Order.",
+    "wookieepedia_slug": "Order_66",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "event_declaration_new_order",
+    "title": "Declaration of the New Order",
+    "category": "events",
+    "summary": "Palpatine's proclamation to the Galactic Senate in 19 BBY that reorganized the Galactic Republic into the first Galactic Empire, with himself as Emperor. The speech was received with thunderous applause from most senators.",
+    "wookieepedia_slug": "Declaration_of_a_New_Order",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "event_mission_rodia",
+    "title": "Mission to Rodia",
+    "category": "events",
+    "summary": "A Clone Wars-era diplomatic mission in which Senator Padmé Amidala traveled to Rodia to persuade Senator Onaconda Farr to maintain his allegiance to the Republic. Nute Gunray had offered food aid to famine-struck Rodia in exchange for Padmé's capture.",
+    "wookieepedia_slug": "Mission_to_Rodia",
+    "rarity": "common",
+    "unlock_condition": { "planet": "rodia", "trigger": "artifact" }
+  },
+  {
+    "id": "event_duel_mustafar",
+    "title": "Duel on Mustafar",
+    "category": "events",
+    "summary": "The climactic confrontation in 19 BBY between Obi-Wan Kenobi and the fallen Anakin Skywalker on the volcanic world of Mustafar. Obi-Wan won the high ground and left Anakin burning beside a lava river, necessitating his reconstruction as Darth Vader.",
+    "wookieepedia_slug": "Duel_on_Mustafar",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "mustafar", "trigger": "landmark" }
+  },
+  {
+    "id": "event_jedi_temple_attack",
+    "title": "Attack on the Jedi Temple",
+    "category": "events",
+    "summary": "Darth Vader led the 501st Legion in a massacre of the Jedi Temple's occupants in 19 BBY as part of Order 66, killing Jedi Knights and younglings alike. The attack was a key step in eradicating the Jedi Order.",
+    "wookieepedia_slug": "Attack_on_the_Jedi_Temple",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "artifact" }
+  }
+]

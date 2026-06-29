@@ -1,0 +1,254 @@
+[
+  {
+    "id": "char_palpatine",
+    "title": "Sheev Palpatine",
+    "category": "characters",
+    "summary": "A Naboo senator who became Supreme Chancellor of the Galactic Republic. In secret he was the Sith Lord Darth Sidious, orchestrating the conflicts that allowed him to seize emergency powers.",
+    "wookieepedia_slug": "Palpatine",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_count_dooku",
+    "title": "Count Dooku",
+    "category": "characters",
+    "summary": "A former Jedi Master who became disillusioned with the Republic and fell to the dark side, becoming the Sith Lord Darth Tyranus. As leader of the Confederacy of Independent Systems he served as Darth Sidious's apprentice.",
+    "wookieepedia_slug": "Dooku",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "geonosis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_mace_windu",
+    "title": "Mace Windu",
+    "category": "characters",
+    "summary": "A senior member of the Jedi High Council and one of the most powerful Jedi of his era, known for his mastery of Form VII lightsaber combat and his distinctive purple-bladed lightsaber. He led the rescue mission to Geonosis that sparked the Clone Wars.",
+    "wookieepedia_slug": "Mace_Windu",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_yoda",
+    "title": "Yoda",
+    "category": "characters",
+    "summary": "Grand Master of the Jedi Order and one of the most powerful Force users in galactic history, having trained Jedi for over 800 years. He led Republic forces at the Battle of Kashyyyk before going into exile on Dagobah after surviving Order 66.",
+    "wookieepedia_slug": "Yoda",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "kashyyyk", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_qui_gon_jinn",
+    "title": "Qui-Gon Jinn",
+    "category": "characters",
+    "summary": "A maverick Jedi Master known for his belief in the Living Force and his willingness to challenge the Jedi Council's orthodoxy. He discovered Anakin Skywalker on Tatooine and was killed by Darth Maul on Naboo.",
+    "wookieepedia_slug": "Qui-Gon_Jinn",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_obi_wan_kenobi",
+    "title": "Obi-Wan Kenobi",
+    "category": "characters",
+    "summary": "A Jedi Master and member of the Jedi High Council who trained Anakin Skywalker as his Padawan. He defeated General Grievous on Utapau and later dueled Anakin on Mustafar, leaving him gravely injured.",
+    "wookieepedia_slug": "Obi-Wan_Kenobi",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "utapau", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_anakin_skywalker",
+    "title": "Anakin Skywalker",
+    "category": "characters",
+    "summary": "A Jedi Knight believed to be the Chosen One of the Force, born without a father from a midi-chlorian conception on Tatooine. He became one of the most powerful Jedi of his era before turning to the dark side as Darth Vader.",
+    "wookieepedia_slug": "Anakin_Skywalker",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "mustafar", "trigger": "artifact" }
+  },
+  {
+    "id": "char_padme_amidala",
+    "title": "Padmé Amidala",
+    "category": "characters",
+    "summary": "The elected Queen of Naboo who later served as a senator for her homeworld in the Galactic Senate. She was the secret wife of Anakin Skywalker and a vocal opponent of the Military Creation Act and emergency powers.",
+    "wookieepedia_slug": "Padmé_Amidala",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "naboo", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_jar_jar_binks",
+    "title": "Jar Jar Binks",
+    "category": "characters",
+    "summary": "A Gungan outcast from Naboo who became an unlikely ally to Qui-Gon Jinn and Obi-Wan Kenobi during the invasion of Naboo. He later served as a Junior Representative in the Galactic Senate and controversially proposed granting emergency powers to Chancellor Palpatine.",
+    "wookieepedia_slug": "Jar_Jar_Binks",
+    "rarity": "common",
+    "unlock_condition": { "planet": "naboo", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_darth_maul",
+    "title": "Darth Maul",
+    "category": "characters",
+    "summary": "A Zabrak Sith Lord and the first apprentice of Darth Sidious, known for his double-bladed lightsaber and fearsome combat skills. He killed Qui-Gon Jinn on Naboo before being bisected by Obi-Wan Kenobi, surviving through sheer hatred.",
+    "wookieepedia_slug": "Maul",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "naboo", "trigger": "artifact" }
+  },
+  {
+    "id": "char_nute_gunray",
+    "title": "Nute Gunray",
+    "category": "characters",
+    "summary": "The Neimoidian Viceroy of the Trade Federation who orchestrated the invasion of Naboo under Darth Sidious's direction. He later became a member of the Separatist Council and harbored a personal vendetta against Padmé Amidala.",
+    "wookieepedia_slug": "Nute_Gunray",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "rodia", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_jango_fett",
+    "title": "Jango Fett",
+    "category": "characters",
+    "summary": "A Mandalorian-raised human bounty hunter considered the best in the galaxy. He served as the genetic template for the Republic's clone army in exchange for an unaltered clone he raised as his son, Boba Fett.",
+    "wookieepedia_slug": "Jango_Fett",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "kamino", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_boba_fett",
+    "title": "Boba Fett",
+    "category": "characters",
+    "summary": "An unaltered clone of Jango Fett raised as his son, who witnessed his father's death at the hands of Mace Windu during the First Battle of Geonosis. He later became a bounty hunter, following in his father's footsteps.",
+    "wookieepedia_slug": "Boba_Fett",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "geonosis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_general_grievous",
+    "title": "General Grievous",
+    "category": "characters",
+    "summary": "A Kaleesh warlord who became the Supreme Commander of the Separatist Droid Army after having his body reconstructed as a cyborg. He collected the lightsabers of Jedi he had slain and was ultimately killed by Obi-Wan Kenobi on Utapau.",
+    "wookieepedia_slug": "Grievous",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "utapau", "trigger": "artifact" }
+  },
+  {
+    "id": "char_ki_adi_mundi",
+    "title": "Ki-Adi-Mundi",
+    "category": "characters",
+    "summary": "A Cerean Jedi Master and member of the Jedi High Council known for his exceptional analytical mind, a trait common among his large-brained species. He led clone troopers on several battlefronts before being killed when his troops executed Order 66.",
+    "wookieepedia_slug": "Ki-Adi-Mundi",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "geonosis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_plo_koon",
+    "title": "Plo Koon",
+    "category": "characters",
+    "summary": "A Kel Dor Jedi Master and valued member of the Jedi High Council, known for his skill as a pilot and his compassion for his clone troopers. He discovered Ahsoka Tano as a child on Shili and sponsored her entry into the Jedi Order.",
+    "wookieepedia_slug": "Plo_Koon",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_kit_fisto",
+    "title": "Kit Fisto",
+    "category": "characters",
+    "summary": "A Nautolan Jedi Master known for his infectious smile and exceptional underwater combat ability. He served on the Jedi High Council and participated in major Clone Wars engagements including the Battle of Kamino.",
+    "wookieepedia_slug": "Kit_Fisto",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "kamino", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_aayla_secura",
+    "title": "Aayla Secura",
+    "category": "characters",
+    "summary": "A Twi'lek Jedi Master who served as a General in the Clone Wars, leading troops on numerous campaigns. She was instrumental in liberating Ryloth from Separatist occupation and was killed by her own clone troopers on Felucia during Order 66.",
+    "wookieepedia_slug": "Aayla_Secura",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "ryloth", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_bail_organa",
+    "title": "Bail Organa",
+    "category": "characters",
+    "summary": "The Viceroy and First Chairman of Alderaan and a senator in the Galactic Republic. He was a founding member of the Alliance to Restore the Republic and adopted Leia Skywalker as his daughter following the rise of the Empire.",
+    "wookieepedia_slug": "Bail_Organa",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_mon_mothma",
+    "title": "Mon Mothma",
+    "category": "characters",
+    "summary": "A senator from Chandrila who became a vocal critic of Supreme Chancellor Palpatine's increasing emergency powers. She co-authored the Delegation of 2000 petition opposing Palpatine's policies and later became a founder of the Rebel Alliance.",
+    "wookieepedia_slug": "Mon_Mothma",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_wilhuff_tarkin",
+    "title": "Wilhuff Tarkin",
+    "category": "characters",
+    "summary": "An ambitious officer from Eriadu who rose through the Republic Navy during the Clone Wars, becoming one of Chancellor Palpatine's most trusted commanders. He developed the Tarkin Doctrine of rule through fear, which shaped the early Empire's military strategy.",
+    "wookieepedia_slug": "Wilhuff_Tarkin",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
+  },
+  {
+    "id": "char_ahsoka_tano",
+    "title": "Ahsoka Tano",
+    "category": "characters",
+    "summary": "A Togruta Padawan assigned to Jedi Knight Anakin Skywalker, whom she met during the Battle of Christophsis. She grew into a skilled warrior and commander before voluntarily leaving the Jedi Order after being falsely accused of bombing the Jedi Temple.",
+    "wookieepedia_slug": "Ahsoka_Tano",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "christophsis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_captain_rex",
+    "title": "Captain Rex",
+    "category": "characters",
+    "summary": "Clone Captain CT-7567, commanding officer of Torrent Company in the 501st Legion. He served under General Anakin Skywalker and later became one of Ahsoka Tano's most trusted allies during the Siege of Mandalore.",
+    "wookieepedia_slug": "Rex",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "christophsis", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_asajj_ventress",
+    "title": "Asajj Ventress",
+    "category": "characters",
+    "summary": "A Dathomirian Nightsister trained as a Sith assassin by Count Dooku, wielding twin curved-hilt red lightsabers. She was abandoned by Dooku after Darth Sidious ordered her death, leading her to seek revenge on her former Master.",
+    "wookieepedia_slug": "Asajj_Ventress",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "ryloth", "trigger": "artifact" }
+  },
+  {
+    "id": "char_cad_bane",
+    "title": "Cad Bane",
+    "category": "characters",
+    "summary": "A Duros bounty hunter widely regarded as the best in the galaxy following Jango Fett's death. He worked for Jabba the Hutt and Darth Sidious during the Clone Wars, carrying out high-profile jobs including stealing a Jedi holocron from the Jedi Temple.",
+    "wookieepedia_slug": "Cad_Bane",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_watto",
+    "title": "Watto",
+    "category": "characters",
+    "summary": "A Toydarian junk dealer and slave owner on Tatooine who kept Shmi Skywalker and her son Anakin as slaves. His immunity to Jedi mind tricks made him resistant to manipulation, though he lost both Anakin and Shmi through separate bets and sales.",
+    "wookieepedia_slug": "Watto",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_shmi_skywalker",
+    "title": "Shmi Skywalker",
+    "category": "characters",
+    "summary": "A slave woman on Tatooine who conceived Anakin Skywalker without a father—attributed to midi-chlorians. She was sold to moisture farmer Cliegg Lars, who freed and married her, before being captured and killed by Tusken Raiders.",
+    "wookieepedia_slug": "Shmi_Skywalker_Lars",
+    "rarity": "rare",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  },
+  {
+    "id": "char_sebulba",
+    "title": "Sebulba",
+    "category": "characters",
+    "summary": "A Dug podracer from Malastare who was the dominant competitor on the Tatooine podracing circuit in 32 BBY. He used illegal sabotage and dirty tactics to win races, until he was defeated by the young Anakin Skywalker in the Boonta Eve Classic.",
+    "wookieepedia_slug": "Sebulba",
+    "rarity": "common",
+    "unlock_condition": { "planet": "tatooine", "trigger": "npc_dialogue" }
+  }
+]

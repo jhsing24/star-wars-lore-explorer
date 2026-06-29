@@ -17,7 +17,7 @@ export default class SaveService {
     this._state = freshState()
   }
 
-  get state() { return this._state }
+  get state() { return structuredClone(this._state) }
 
   load() {
     const raw = this.storage.getItem(this.key)
@@ -78,7 +78,7 @@ export default class SaveService {
   }
 
   getPlanetProgress(planetId) {
-    return this._state.planetProgress[planetId] || { found: 0, total: 0 }
+    return { ...(this._state.planetProgress[planetId] ?? { found: 0, total: 0 }) }
   }
 
   totalUnlocked() {

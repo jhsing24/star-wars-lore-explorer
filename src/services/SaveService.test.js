@@ -62,4 +62,12 @@ describe('SaveService', () => {
     save.unlockLore(npcEntry); save.reset()
     expect(save.totalUnlocked()).toBe(0)
   })
+
+  it('falls back to defaults when stored JSON is corrupt', () => {
+    storage.setItem('swle_save', '{not valid json')
+    const recovered = new SaveService(storage)
+    recovered.load()
+    expect(recovered.state.unlockedLore).toEqual([])
+    expect(recovered.totalUnlocked()).toBe(0)
+  })
 })

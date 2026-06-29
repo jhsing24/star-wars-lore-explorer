@@ -165,7 +165,7 @@
     "id": "char_bail_organa",
     "title": "Bail Organa",
     "category": "characters",
-    "summary": "The Viceroy and First Chairman of Alderaan and a senator in the Galactic Republic. He was a founding member of the Alliance to Restore the Republic and adopted Leia Skywalker as his daughter following the rise of the Empire.",
+    "summary": "The Senator and Viceroy of Alderaan who served on the Loyalist Committee and signed the Petition of 2000, opposing Chancellor Palpatine's dangerous accumulation of emergency powers during the Clone Wars. After Order 66 in 19 BBY, he helped shelter surviving Jedi and adopted Leia Skywalker as his daughter following the rise of the Empire.",
     "wookieepedia_slug": "Bail_Organa",
     "rarity": "rare",
     "unlock_condition": { "planet": "kashyyyk", "trigger": "npc_dialogue" }
@@ -174,7 +174,7 @@
     "id": "char_mon_mothma",
     "title": "Mon Mothma",
     "category": "characters",
-    "summary": "A senator from Chandrila who became a vocal critic of Supreme Chancellor Palpatine's increasing emergency powers. She co-authored the Delegation of 2000 petition opposing Palpatine's policies and later became a founder of the Rebel Alliance.",
+    "summary": "The young Senator of Chandrila who, alongside Bail Organa, co-authored the Petition of 2000 — a formal protest by the Delegation of 2000 senators urging Chancellor Palpatine to relinquish his wartime emergency powers near the end of the Clone Wars. She was one of the most principled voices for democracy in the final years of the Republic.",
     "wookieepedia_slug": "Mon_Mothma",
     "rarity": "rare",
     "unlock_condition": { "planet": "mandalore", "trigger": "npc_dialogue" }

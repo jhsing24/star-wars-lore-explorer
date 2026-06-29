@@ -3,7 +3,7 @@
     "id": "species_human",
     "title": "Human",
     "category": "species",
-    "summary": "The most populous species in the galaxy, found on thousands of worlds across all regions. Humans dominated the Galactic Republic's politics and military, and were uniquely capable of producing Force-sensitives at a higher rate than many species.",
+    "summary": "The most populous and widespread species in the galaxy, found on thousands of worlds across all regions. As the most numerous species, humans dominated the Galactic Republic's political institutions, military, and bureaucracy, which is why they were also heavily represented in the ranks of the Jedi Order.",
     "wookieepedia_slug": "Human",
     "rarity": "common",
     "unlock_condition": { "planet": "coruscant", "trigger": "terminal" }
@@ -102,7 +102,7 @@
     "id": "species_mon_calamari",
     "title": "Mon Calamari",
     "category": "species",
-    "summary": "An amphibious species from the ocean world of Mon Cala, known for their exceptional shipbuilding skills. Mon Calamari vessels were among the finest in the galaxy, and members of the species, like Admiral Ackbar, became key figures in the Rebel Alliance.",
+    "summary": "An amphibious species from the ocean world of Mon Cala, sharing their homeworld with the Quarren, and known for their exceptional shipbuilding skills. During the prequel era, Senator Meena Tills represented Mon Cala in the Galactic Senate, advocating for her people's interests in the Republic.",
     "wookieepedia_slug": "Mon_Calamari",
     "rarity": "common",
     "unlock_condition": { "planet": "rodia", "trigger": "terminal" }

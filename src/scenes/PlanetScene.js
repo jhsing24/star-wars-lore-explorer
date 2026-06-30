@@ -41,6 +41,7 @@ export default class PlanetScene extends Phaser.Scene {
       this.add.text(lm.x + 6, lm.y + 6, lm.name, { fontFamily: 'monospace', fontSize: '13px', color: '#d7dde6' })
       return { def: lm, rect }
     })
+    this._enteredLandmarks = new Set()
 
     // point interactables
     this.interactables = layout.interactables.map((def) => createInteractable(this, def))
@@ -88,6 +89,23 @@ export default class PlanetScene extends Phaser.Scene {
       this.promptText.setText('Press E').setPosition(near.x, near.y - 28).setVisible(true)
     } else {
       this.promptText.setVisible(false)
+    }
+
+    if (!this.registry.get('uiOpen')) {
+      for (const zone of this.landmarkZones) {
+        const lm = zone.def
+        const inside = this.player.x >= lm.x && this.player.x <= lm.x + lm.w &&
+                       this.player.y >= lm.y && this.player.y <= lm.y + lm.h
+        if (inside && !this._enteredLandmarks.has(lm.id)) {
+          this._enteredLandmarks.add(lm.id)
+          const save = this.registry.get('save')
+          const entry = this.registry.get('lore').getEntry(lm.loreId)
+          if (save.unlockLore(entry)) {
+            this._refreshProgress()
+            import('../ui/DiscoveryToast.js').then(m => m.showToast(entry))
+          }
+        }
+      }
     }
   }
 

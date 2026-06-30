@@ -26,3 +26,16 @@ describe('groupByCategory', () => {
     expect(g.planets.map(e => e.id)).toEqual(['b'])
   })
 })
+
+import { rarityClass } from './helpers.js'
+
+describe('rarityClass', () => {
+  it('returns a namespaced class for known rarities', () => {
+    expect(rarityClass('legendary')).toBe('card-legendary')
+    expect(rarityClass('rare')).toBe('card-rare')
+    expect(rarityClass('common')).toBe('card-common')
+  })
+  it('falls back to common for unknown rarity', () => {
+    expect(rarityClass('mythic')).toBe('card-common')
+  })
+})

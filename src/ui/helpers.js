@@ -18,3 +18,8 @@ export function groupByCategory(entries) {
   }
   return out
 }
+
+export function rarityClass(rarity) {
+  const known = ['common', 'rare', 'legendary']
+  return `card-${known.includes(rarity) ? rarity : 'common'}`
+}

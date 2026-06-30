@@ -109,8 +109,12 @@ export default class PlanetScene extends Phaser.Scene {
   }
 
   dispatchInteraction(near, entry) {
-    // type-specific overlays are wired in Tasks 11-14; placeholder until then
-    console.log('interact', near.def.type, entry.id)
+    const type = near.def.type
+    if (type === 'artifact') {
+      import('../ui/CardReveal.js').then(m => m.openCardReveal(entry, this.game))
+    } else {
+      console.log('interact', type, entry.id) // npc/terminal wired in Tasks 13-14
+    }
   }
 
   _refreshProgress() {

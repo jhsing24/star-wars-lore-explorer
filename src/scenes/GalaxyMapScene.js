@@ -48,6 +48,10 @@ export default class GalaxyMapScene extends Phaser.Scene {
     this.input.keyboard.on('keydown-UP', () => this.cycle(-1))
     this.input.keyboard.on('keydown-ENTER', () => this.travel())
     this.input.keyboard.on('keydown-SPACE', () => this.travel())
+    this.input.keyboard.on('keydown-C', () => {
+      import('../ui/Codex.js').then(m =>
+        m.openCodex(this.registry.get('lore'), this.registry.get('save'), this.game))
+    })
   }
 
   cycle(dir) {

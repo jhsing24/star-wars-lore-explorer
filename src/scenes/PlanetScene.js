@@ -68,6 +68,11 @@ export default class PlanetScene extends Phaser.Scene {
     this.promptText = this.add.text(0, 0, '', { fontFamily: 'monospace', fontSize: '13px', color: '#c8a24a' })
       .setOrigin(0.5).setDepth(50)
     this.input.keyboard.on('keydown-E', () => this.tryInteract())
+    this.input.keyboard.on('keydown-C', () => {
+      if (this.registry.get('uiOpen')) return
+      import('../ui/Codex.js').then(m =>
+        m.openCodex(this.registry.get('lore'), this.registry.get('save'), this.game))
+    })
 
     this._refreshProgress()
   }

@@ -1,3 +1,5 @@
+import { CATEGORIES } from '../data/validate.js'
+
 const FACTION_COLORS = {
   republic: 0x4a90d9,
   separatist: 0xd9534a,
@@ -6,4 +8,13 @@ const FACTION_COLORS = {
 
 export function factionColor(faction) {
   return FACTION_COLORS[faction] ?? FACTION_COLORS.neutral
+}
+
+export function groupByCategory(entries) {
+  const out = {}
+  for (const cat of CATEGORIES) {
+    const inCat = entries.filter(e => e.category === cat)
+    if (inCat.length) out[cat] = inCat
+  }
+  return out
 }

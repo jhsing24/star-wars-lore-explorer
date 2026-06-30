@@ -3,7 +3,7 @@ import { groupByCategory } from './helpers.js'
 
 const CATEGORY_LABELS = {
   planets: 'Planets', factions: 'Factions', characters: 'Characters',
-  events: 'Events', species: 'Species'
+  events: 'Events', species: 'Species', holocrons: 'Holocrons'
 }
 
 export function openCodex(loreService, save, game) {

@@ -38,10 +38,18 @@ describe('seed lore data', () => {
 
   it('distributes 4..8 entries to every canonical planet', () => {
     const counts = Object.fromEntries(PLANET_IDS.map(p => [p, 0]))
-    for (const e of allLore) counts[e.unlock_condition.planet]++
+    for (const e of allLore) {
+      if (e.category === 'holocrons') continue
+      counts[e.unlock_condition.planet]++
+    }
     for (const p of PLANET_IDS) {
       expect(counts[p], `${p} entry count`).toBeGreaterThanOrEqual(4)
       expect(counts[p], `${p} entry count`).toBeLessThanOrEqual(8)
     }
+  })
+
+  it('includes 3 holocron reward entries', () => {
+    expect(allLore.filter(e => e.category === 'holocrons').map(e => e.id).sort())
+      .toEqual(['holo_clones', 'holo_naboo', 'holo_sith'])
   })
 })

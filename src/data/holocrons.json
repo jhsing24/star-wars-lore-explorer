@@ -1,0 +1,29 @@
+[
+  {
+    "id": "holo_naboo",
+    "title": "The Sith Gambit of Naboo",
+    "category": "holocrons",
+    "summary": "The Trade Federation's blockade of Naboo was secretly engineered by Darth Sidious to manufacture a crisis. The resulting no-confidence vote toppled Chancellor Valorum and swept Sidious's public persona, Senator Palpatine, into the office of Supreme Chancellor.",
+    "wookieepedia_slug": "Darth_Sidious",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "naboo", "trigger": "quest" }
+  },
+  {
+    "id": "holo_clones",
+    "title": "The Sifo-Dyas Deception",
+    "category": "holocrons",
+    "summary": "The Grand Army of the Republic was secretly commissioned on Kamino in the name of the Jedi Master Sifo-Dyas, years before the Senate authorized any army. The plot was orchestrated by Darth Tyranus—Count Dooku—on behalf of the Sith.",
+    "wookieepedia_slug": "Sifo-Dyas",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "kamino", "trigger": "quest" }
+  },
+  {
+    "id": "holo_sith",
+    "title": "The Grand Plan of the Sith",
+    "category": "holocrons",
+    "summary": "A millennium before the Clone Wars, Darth Bane reformed the Sith under the Rule of Two—one master, one apprentice—to work in secret toward revenge against the Jedi. Darth Sidious was the culmination of that long, hidden plan.",
+    "wookieepedia_slug": "Rule_of_Two",
+    "rarity": "legendary",
+    "unlock_condition": { "planet": "mustafar", "trigger": "quest" }
+  }
+]

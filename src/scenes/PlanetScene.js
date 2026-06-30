@@ -99,6 +99,7 @@ export default class PlanetScene extends Phaser.Scene {
       this._refreshProgress()
       import('./../ui/DiscoveryToast.js').then(m => m.showToast(entry))
     }
+    this.promptText.setVisible(false)
     this.dispatchInteraction(near, entry)
   }
 

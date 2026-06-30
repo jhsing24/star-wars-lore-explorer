@@ -11,6 +11,17 @@ export default class GalaxyMapScene extends Phaser.Scene {
     this.add.text(40, 66, 'Arrow keys: select system   Enter: travel   C: codex',
       { fontFamily: 'monospace', fontSize: '14px', color: '#5b6472' })
 
+    const lore = this.registry.get('lore')
+    const totalLore = lore.getAllEntries().length
+    const found = save.totalUnlocked()
+    const pct = totalLore ? Math.round((found / totalLore) * 100) : 0
+
+    const barX = 40, barY = 100, barW = 320, barH = 10
+    this.add.rectangle(barX, barY, barW, barH, 0x1b2230).setOrigin(0, 0.5)
+    this.add.rectangle(barX, barY, barW * (found / Math.max(totalLore, 1)), barH, 0xc8a24a).setOrigin(0, 0.5)
+    this.add.text(barX + barW + 12, barY, `${found}/${totalLore} lore (${pct}%)`,
+      { fontFamily: 'monospace', fontSize: '12px', color: '#c8a24a' }).setOrigin(0, 0.5)
+
     const ids = Object.keys(planetLayouts)
 
     // faint hyperspace lanes between same-faction neighbours

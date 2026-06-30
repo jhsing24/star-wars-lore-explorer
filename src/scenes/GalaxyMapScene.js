@@ -46,6 +46,8 @@ export default class GalaxyMapScene extends Phaser.Scene {
     this.input.keyboard.on('keydown-LEFT', () => this.cycle(-1))
     this.input.keyboard.on('keydown-DOWN', () => this.cycle(1))
     this.input.keyboard.on('keydown-UP', () => this.cycle(-1))
+    this.input.keyboard.on('keydown-ENTER', () => this.travel())
+    this.input.keyboard.on('keydown-SPACE', () => this.travel())
   }
 
   cycle(dir) {
@@ -57,5 +59,22 @@ export default class GalaxyMapScene extends Phaser.Scene {
     const node = this.nodes[this.selected]
     const l = planetLayouts[node.id]
     this.ship.setPosition(l.galaxyPos.x, l.galaxyPos.y - 24)
+  }
+
+  travel() {
+    if (this.traveling) return
+    this.traveling = true
+    const node = this.nodes[this.selected]
+    const l = planetLayouts[node.id]
+    this.tweens.add({
+      targets: this.ship,
+      x: l.galaxyPos.x,
+      y: l.galaxyPos.y,
+      duration: 500,
+      onComplete: () => {
+        this.traveling = false
+        this.scene.start('PlanetScene', { planetId: node.id })
+      }
+    })
   }
 }

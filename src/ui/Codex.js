@@ -1,4 +1,4 @@
-import { openOverlay, closeOverlay } from './overlay.js'
+import { openOverlay } from './overlay.js'
 import { groupByCategory } from './helpers.js'
 
 const CATEGORY_LABELS = {
@@ -7,11 +7,12 @@ const CATEGORY_LABELS = {
 }
 
 export function openCodex(loreService, save, game) {
-  const unlocked = loreService.getAllEntries().filter(e => save.isUnlocked(e.id))
+  const all = loreService.getAllEntries()
+  const unlocked = all.filter(e => save.isUnlocked(e.id))
   const panel = document.createElement('div')
   panel.className = 'panel codex'
 
-  const total = loreService.getAllEntries().length
+  const total = all.length
   panel.innerHTML = `
     <h2>Codex</h2>
     <div class="muted">${unlocked.length} / ${total} entries discovered</div>
@@ -66,10 +67,13 @@ function buildEntry(entry, loreService) {
     if (tab.dataset.tab === 'extended' && !enriched) {
       enriched = true
       const panel = wrap.querySelector('[data-panel="extended"]')
-      const text = await loreService.enrich(entry.id)
-      panel.innerHTML = text
-        ? text
-        : '<span class="muted">Extended lore unavailable offline. Reconnect and revisit.</span>'
+      const fallback = '<span class="muted">Extended lore unavailable offline. Reconnect and revisit.</span>'
+      try {
+        const text = await loreService.enrich(entry.id)
+        panel.innerHTML = text || fallback
+      } catch {
+        panel.innerHTML = fallback
+      }
     }
   }))
   return wrap

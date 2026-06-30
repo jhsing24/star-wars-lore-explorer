@@ -48,3 +48,38 @@ export function validateLore(entries) {
   }
   return errs
 }
+
+const FACTIONS = ['republic', 'separatist', 'neutral']
+
+export function validateLayouts(layouts, byId) {
+  const errs = []
+  for (const [planetId, l] of Object.entries(layouts)) {
+    if (!PLANET_IDS.includes(planetId)) errs.push(`layout "${planetId}": not a canonical planet id`)
+    if (!FACTIONS.includes(l.faction)) errs.push(`${planetId}: invalid faction "${l.faction}"`)
+    if (!l.galaxyPos || typeof l.galaxyPos.x !== 'number' || typeof l.galaxyPos.y !== 'number') {
+      errs.push(`${planetId}: galaxyPos must have numeric x/y`)
+    }
+    if (!l.spawn || typeof l.spawn.x !== 'number') errs.push(`${planetId}: spawn must have numeric x/y`)
+    if (!l.size || l.size.width < 1280 || l.size.height < 720) {
+      errs.push(`${planetId}: size must be at least 1280x720`)
+    }
+    const landmarks = l.landmarks || []
+    const interactables = l.interactables || []
+    const points = landmarks.length + interactables.length
+    if (points < 4 || points > 8) errs.push(`${planetId}: must have 4..8 lore points (has ${points})`)
+
+    for (const lm of landmarks) {
+      if (!byId.has(lm.loreId)) errs.push(`${planetId} landmark "${lm.id}": unknown loreId "${lm.loreId}"`)
+    }
+    for (const it of interactables) {
+      if (!['npc', 'terminal', 'artifact'].includes(it.type)) {
+        errs.push(`${planetId}: invalid interactable type "${it.type}"`)
+      }
+      if (!byId.has(it.loreId)) errs.push(`${planetId} interactable: unknown loreId "${it.loreId}"`)
+      if (it.type === 'npc' && (!Array.isArray(it.lines) || it.lines.length === 0)) {
+        errs.push(`${planetId} npc "${it.name || '?'}": must have non-empty lines`)
+      }
+    }
+  }
+  return errs
+}

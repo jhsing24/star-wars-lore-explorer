@@ -71,3 +71,46 @@ describe('SaveService', () => {
     expect(recovered.totalUnlocked()).toBe(0)
   })
 })
+
+describe('SaveService quests/health/challenges', () => {
+  let storage, save
+  beforeEach(() => { storage = createMemoryStorage(); save = new SaveService(storage); save.load() })
+
+  it('defaults: no quests, maxHealth 100, no cleared challenges', () => {
+    expect(save.allQuestStates()).toEqual({})
+    expect(save.getQuestState('q1')).toBeNull()
+    expect(save.getMaxHealth()).toBe(100)
+    expect(save.isChallengeCleared('naboo', 'naboo_palace')).toBe(false)
+  })
+
+  it('stores and persists quest state', () => {
+    save.setQuestState('q1', { status: 'active', step: 2 })
+    expect(save.getQuestState('q1')).toEqual({ status: 'active', step: 2 })
+    const reloaded = new SaveService(storage); reloaded.load()
+    expect(reloaded.getQuestState('q1')).toEqual({ status: 'active', step: 2 })
+  })
+
+  it('raises and persists max health', () => {
+    save.addMaxHealth(20)
+    expect(save.getMaxHealth()).toBe(120)
+    const reloaded = new SaveService(storage); reloaded.load()
+    expect(reloaded.getMaxHealth()).toBe(120)
+  })
+
+  it('clears and persists challenges', () => {
+    save.clearChallenge('naboo', 'naboo_palace')
+    expect(save.isChallengeCleared('naboo', 'naboo_palace')).toBe(true)
+    expect(save.isChallengeCleared('naboo', 'other')).toBe(false)
+    const reloaded = new SaveService(storage); reloaded.load()
+    expect(reloaded.isChallengeCleared('naboo', 'naboo_palace')).toBe(true)
+  })
+
+  it('loads a pre-expansion save shape with sane defaults (backward compatible)', () => {
+    storage.setItem('swle_save', JSON.stringify({ currentPlanet: 'naboo', unlockedLore: ['x'] }))
+    const s = new SaveService(storage); s.load()
+    expect(s.getMaxHealth()).toBe(100)
+    expect(s.allQuestStates()).toEqual({})
+    expect(s.isChallengeCleared('naboo', 'naboo_palace')).toBe(false)
+    expect(s.isUnlocked('x')).toBe(true)
+  })
+})

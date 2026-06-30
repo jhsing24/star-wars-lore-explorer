@@ -6,7 +6,10 @@ function freshState() {
     visitedPlanets: [],
     unlockedLore: [],
     cardCollection: [],
-    planetProgress: {}
+    planetProgress: {},
+    quests: {},
+    maxHealth: 100,
+    clearedChallenges: []
   }
 }
 
@@ -83,5 +86,43 @@ export default class SaveService {
 
   totalUnlocked() {
     return this._state.unlockedLore.length
+  }
+
+  getQuestState(id) {
+    return this._state.quests[id] ?? null
+  }
+
+  setQuestState(id, state) {
+    this._state.quests[id] = state
+    this.persist()
+  }
+
+  allQuestStates() {
+    return { ...this._state.quests }
+  }
+
+  getMaxHealth() {
+    return this._state.maxHealth ?? 100
+  }
+
+  addMaxHealth(n) {
+    this._state.maxHealth = this.getMaxHealth() + n
+    this.persist()
+  }
+
+  _challengeKey(planetId, challengeId) {
+    return `${planetId}:${challengeId}`
+  }
+
+  isChallengeCleared(planetId, challengeId) {
+    return this._state.clearedChallenges.includes(this._challengeKey(planetId, challengeId))
+  }
+
+  clearChallenge(planetId, challengeId) {
+    const key = this._challengeKey(planetId, challengeId)
+    if (!this._state.clearedChallenges.includes(key)) {
+      this._state.clearedChallenges.push(key)
+      this.persist()
+    }
   }
 }

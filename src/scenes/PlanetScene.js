@@ -114,8 +114,8 @@ export default class PlanetScene extends Phaser.Scene {
       import('../ui/CardReveal.js').then(m => m.openCardReveal(entry, this.game))
     } else if (type === 'terminal') {
       import('../ui/Terminal.js').then(m => m.openTerminal(entry, this.registry.get('lore'), this.game))
-    } else {
-      console.log('interact', type, entry.id) // npc wired in Task 14
+    } else if (type === 'npc') {
+      import('../ui/DialogueBox.js').then(m => m.openDialogue(near.def, entry, this.game))
     }
   }
 

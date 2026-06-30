@@ -51,15 +51,24 @@ export function validateLore(entries) {
 
 const FACTIONS = ['republic', 'separatist', 'neutral']
 
+const PLANET_FACTIONS = {
+  coruscant: 'republic', kamino: 'republic', kashyyyk: 'republic', naboo: 'republic',
+  geonosis: 'separatist', utapau: 'separatist', mustafar: 'separatist', rodia: 'separatist',
+  tatooine: 'neutral', mandalore: 'neutral', christophsis: 'neutral', ryloth: 'neutral'
+}
+
 export function validateLayouts(layouts, byId) {
   const errs = []
   for (const [planetId, l] of Object.entries(layouts)) {
     if (!PLANET_IDS.includes(planetId)) errs.push(`layout "${planetId}": not a canonical planet id`)
     if (!FACTIONS.includes(l.faction)) errs.push(`${planetId}: invalid faction "${l.faction}"`)
+    if (PLANET_FACTIONS[planetId] && l.faction !== PLANET_FACTIONS[planetId]) {
+      errs.push(`${planetId}: faction must be "${PLANET_FACTIONS[planetId]}"`)
+    }
     if (!l.galaxyPos || typeof l.galaxyPos.x !== 'number' || typeof l.galaxyPos.y !== 'number') {
       errs.push(`${planetId}: galaxyPos must have numeric x/y`)
     }
-    if (!l.spawn || typeof l.spawn.x !== 'number') errs.push(`${planetId}: spawn must have numeric x/y`)
+    if (!l.spawn || typeof l.spawn.x !== 'number' || typeof l.spawn.y !== 'number') errs.push(`${planetId}: spawn must have numeric x/y`)
     if (!l.size || l.size.width < 1280 || l.size.height < 720) {
       errs.push(`${planetId}: size must be at least 1280x720`)
     }

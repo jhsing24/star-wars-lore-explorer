@@ -75,4 +75,19 @@ describe('validateLayouts', () => {
     delete bad.coruscant.interactables[0].lines
     expect(validateLayouts(bad, byId).some(e => e.includes('lines'))).toBe(true)
   })
+  it('flags a size below the 1280x720 floor', () => {
+    const bad = structuredClone(base)
+    bad.coruscant.size = { width: 100, height: 100 }
+    expect(validateLayouts(bad, byId).some(e => e.includes('size'))).toBe(true)
+  })
+  it('flags an invalid interactable type', () => {
+    const bad = structuredClone(base)
+    bad.coruscant.interactables[1].type = 'spaceship'
+    expect(validateLayouts(bad, byId).some(e => e.includes('type'))).toBe(true)
+  })
+  it('flags a faction that does not match the planet', () => {
+    const bad = structuredClone(base)
+    bad.coruscant.faction = 'separatist'
+    expect(validateLayouts(bad, byId).some(e => e.includes('faction'))).toBe(true)
+  })
 })

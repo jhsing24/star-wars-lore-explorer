@@ -1,6 +1,6 @@
-export const CATEGORIES = ['planets', 'factions', 'characters', 'events', 'species']
+export const CATEGORIES = ['planets', 'factions', 'characters', 'events', 'species', 'holocrons']
 export const RARITIES = ['common', 'rare', 'legendary']
-export const TRIGGERS = ['landmark', 'terminal', 'npc_dialogue', 'artifact']
+export const TRIGGERS = ['landmark', 'terminal', 'npc_dialogue', 'artifact', 'quest']
 export const PLANET_IDS = [
   'coruscant', 'naboo', 'kamino', 'geonosis', 'kashyyyk', 'mustafar',
   'utapau', 'tatooine', 'mandalore', 'ryloth', 'christophsis', 'rodia'
@@ -89,6 +89,82 @@ export function validateLayouts(layouts, byId) {
         errs.push(`${planetId} npc "${it.name || '?'}": must have non-empty lines`)
       }
     }
+  }
+  return errs
+}
+
+const OBJECTIVE_TYPES = ['talk', 'discover', 'enter', 'challenge']
+
+function npcLoreIdsOn(layout) {
+  return (layout?.interactables || []).filter(i => i.type === 'npc').map(i => i.loreId)
+}
+function landmarkIdsOn(layout) {
+  return (layout?.landmarks || []).map(l => l.id)
+}
+
+function validateChallengeGeometry(planetId, cid, c, layout, errs) {
+  const within = (px, py) =>
+    px >= c.bounds.x && px <= c.bounds.x + c.bounds.w &&
+    py >= c.bounds.y && py <= c.bounds.y + c.bounds.h
+  if (!c.bounds || !layout?.size) { errs.push(`${planetId}/${cid}: missing bounds/size`); return }
+  if (c.bounds.x < 0 || c.bounds.y < 0 ||
+      c.bounds.x + c.bounds.w > layout.size.width ||
+      c.bounds.y + c.bounds.h > layout.size.height) {
+    errs.push(`${planetId}/${cid}: bounds outside planet size`)
+  }
+  if (!c.checkpoint || !within(c.checkpoint.x, c.checkpoint.y)) {
+    errs.push(`${planetId}/${cid}: checkpoint outside bounds`)
+  }
+  if (!c.goal || !within(c.goal.x, c.goal.y)) {
+    errs.push(`${planetId}/${cid}: goal outside bounds`)
+  }
+  for (const h of (c.hazards || [])) {
+    if (!['static', 'patrol', 'sweep'].includes(h.type)) {
+      errs.push(`${planetId}/${cid}: invalid hazard type "${h.type}"`)
+    }
+  }
+}
+
+export function validateQuests(quests, byId, layouts) {
+  const errs = []
+  // every challenge zone referenced or present is geometry-checked
+  for (const [planetId, layout] of Object.entries(layouts)) {
+    for (const [cid, c] of Object.entries(layout.challenges || {})) {
+      validateChallengeGeometry(planetId, cid, c, layout, errs)
+    }
+  }
+  const seen = new Set()
+  for (const q of quests) {
+    if (typeof q.id !== 'string' || !q.id) errs.push('quest with missing id')
+    if (seen.has(q.id)) errs.push(`duplicate quest id "${q.id}"`)
+    seen.add(q.id)
+    if (typeof q.title !== 'string' || !q.title) errs.push(`${q.id}: missing title`)
+    // giver
+    const g = q.giver || {}
+    if (!PLANET_IDS.includes(g.planet)) errs.push(`${q.id}: giver.planet invalid`)
+    else if (!npcLoreIdsOn(layouts[g.planet]).includes(g.npcLoreId)) {
+      errs.push(`${q.id}: giver npc "${g.npcLoreId}" not an NPC on ${g.planet}`)
+    }
+    if (!Array.isArray(q.steps) || q.steps.length === 0) errs.push(`${q.id}: needs steps`)
+    for (const step of (q.steps || [])) {
+      const o = step.objective || {}
+      if (!OBJECTIVE_TYPES.includes(o.type)) { errs.push(`${q.id}/${step.id}: invalid objective type "${o.type}"`); continue }
+      if (o.type === 'talk') {
+        if (!PLANET_IDS.includes(o.planet)) errs.push(`${q.id}/${step.id}: talk planet invalid`)
+        else if (!npcLoreIdsOn(layouts[o.planet]).includes(o.npcLoreId)) errs.push(`${q.id}/${step.id}: talk npc "${o.npcLoreId}" not on ${o.planet}`)
+      } else if (o.type === 'discover') {
+        if (!byId.has(o.loreId)) errs.push(`${q.id}/${step.id}: discover unknown loreId "${o.loreId}"`)
+      } else if (o.type === 'enter') {
+        if (!PLANET_IDS.includes(o.planet)) errs.push(`${q.id}/${step.id}: enter planet invalid`)
+        else if (!landmarkIdsOn(layouts[o.planet]).includes(o.landmarkId)) errs.push(`${q.id}/${step.id}: enter landmark "${o.landmarkId}" not on ${o.planet}`)
+      } else if (o.type === 'challenge') {
+        if (!PLANET_IDS.includes(o.planet)) errs.push(`${q.id}/${step.id}: challenge planet invalid`)
+        else if (!(layouts[o.planet]?.challenges || {})[o.challengeId]) errs.push(`${q.id}/${step.id}: unknown challenge "${o.challengeId}" on ${o.planet}`)
+      }
+    }
+    const r = q.reward || {}
+    if (!byId.has(r.holocronLoreId)) errs.push(`${q.id}: reward holocron "${r.holocronLoreId}" not in lore`)
+    if (typeof r.maxHealthBonus !== 'number') errs.push(`${q.id}: reward.maxHealthBonus must be a number`)
   }
   return errs
 }

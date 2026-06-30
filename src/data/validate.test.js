@@ -91,3 +91,73 @@ describe('validateLayouts', () => {
     expect(validateLayouts(bad, byId).some(e => e.includes('faction'))).toBe(true)
   })
 })
+
+import { validateQuests } from './validate.js'
+
+describe('validateQuests', () => {
+  const byId = new Map([
+    ['char_padme_amidala', { id: 'char_padme_amidala' }],
+    ['char_palpatine', { id: 'char_palpatine' }],
+    ['event_invasion_naboo', { id: 'event_invasion_naboo' }],
+    ['holo_naboo', { id: 'holo_naboo' }]
+  ])
+  const layouts = {
+    naboo: {
+      size: { width: 1600, height: 1200 },
+      landmarks: [{ id: 'lm_battle_naboo' }],
+      interactables: [{ type: 'npc', loreId: 'char_padme_amidala' }],
+      challenges: {
+        naboo_palace: {
+          bounds: { x: 100, y: 100, w: 400, h: 400 },
+          checkpoint: { x: 150, y: 150 },
+          goal: { x: 400, y: 400, w: 60, h: 60 },
+          hazards: [{ type: 'patrol', x: 200, y: 200, w: 30, h: 30, damage: 20, speed: 100, axis: 'x', range: 200 }]
+        }
+      }
+    },
+    coruscant: {
+      size: { width: 1600, height: 1200 }, landmarks: [],
+      interactables: [{ type: 'npc', loreId: 'char_palpatine' }], challenges: {}
+    }
+  }
+  const good = [{
+    id: 'q_naboo', title: 'Shadows over Naboo',
+    giver: { planet: 'naboo', npcLoreId: 'char_padme_amidala' },
+    summary: 's',
+    steps: [
+      { id: 's1', hint: 'h', objective: { type: 'talk', planet: 'coruscant', npcLoreId: 'char_palpatine' } },
+      { id: 's2', hint: 'h', objective: { type: 'discover', loreId: 'event_invasion_naboo' } },
+      { id: 's3', hint: 'h', objective: { type: 'challenge', planet: 'naboo', challengeId: 'naboo_palace' } },
+      { id: 's4', hint: 'h', objective: { type: 'enter', planet: 'naboo', landmarkId: 'lm_battle_naboo' } }
+    ],
+    reward: { holocronLoreId: 'holo_naboo', maxHealthBonus: 20 }
+  }]
+
+  it('accepts a well-formed quest', () => {
+    expect(validateQuests(good, byId, layouts)).toEqual([])
+  })
+  it('flags a giver NPC not present on its planet', () => {
+    const bad = structuredClone(good); bad[0].giver.npcLoreId = 'char_palpatine' // not on naboo
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('giver'))).toBe(true)
+  })
+  it('flags an unknown objective type', () => {
+    const bad = structuredClone(good); bad[0].steps[0].objective.type = 'fly'
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('type'))).toBe(true)
+  })
+  it('flags a talk NPC not on the named planet', () => {
+    const bad = structuredClone(good); bad[0].steps[0].objective.npcLoreId = 'char_padme_amidala' // on naboo not coruscant
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('npc'))).toBe(true)
+  })
+  it('flags an unknown challenge id', () => {
+    const bad = structuredClone(good); bad[0].steps[2].objective.challengeId = 'ghost'
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('challenge'))).toBe(true)
+  })
+  it('flags a checkpoint outside challenge bounds', () => {
+    const bad = structuredClone(layouts); bad.naboo.challenges.naboo_palace.checkpoint = { x: 9000, y: 9000 }
+    expect(validateQuests(good, byId, bad).some(e => e.includes('checkpoint'))).toBe(true)
+  })
+  it('flags a missing reward holocron', () => {
+    const bad = structuredClone(good); bad[0].reward.holocronLoreId = 'ghost'
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('holocron'))).toBe(true)
+  })
+})

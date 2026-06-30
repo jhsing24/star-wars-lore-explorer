@@ -112,8 +112,10 @@ export default class PlanetScene extends Phaser.Scene {
     const type = near.def.type
     if (type === 'artifact') {
       import('../ui/CardReveal.js').then(m => m.openCardReveal(entry, this.game))
+    } else if (type === 'terminal') {
+      import('../ui/Terminal.js').then(m => m.openTerminal(entry, this.registry.get('lore'), this.game))
     } else {
-      console.log('interact', type, entry.id) // npc/terminal wired in Tasks 13-14
+      console.log('interact', type, entry.id) // npc wired in Task 14
     }
   }
 

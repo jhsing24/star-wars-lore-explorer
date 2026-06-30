@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import BootScene from './scenes/BootScene.js'
+import GalaxyMapScene from './scenes/GalaxyMapScene.js'
 
 const config = {
   type: Phaser.AUTO,
@@ -12,7 +13,7 @@ const config = {
     height: 720
   },
   physics: { default: 'arcade', arcade: { debug: false } },
-  scene: [BootScene]
+  scene: [BootScene, GalaxyMapScene]
 }
 
 // eslint-disable-next-line no-new

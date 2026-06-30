@@ -31,6 +31,9 @@ describe('pure helpers', () => {
     expect(stripHtml('<p>Hello <b>there</b>.</p>\n<p>General Kenobi.</p>'))
       .toBe('Hello there. General Kenobi.')
   })
+  it('decodes common HTML entities', () => {
+    expect(stripHtml('Obi&#39;Wan said &quot;hello&quot; &amp; left')).toBe('Obi\'Wan said "hello" & left')
+  })
 })
 
 describe('LoreService lookups', () => {

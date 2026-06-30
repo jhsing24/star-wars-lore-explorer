@@ -70,7 +70,7 @@ function buildEntry(entry, loreService) {
       const fallback = '<span class="muted">Extended lore unavailable offline. Reconnect and revisit.</span>'
       try {
         const text = await loreService.enrich(entry.id)
-        panel.innerHTML = text || fallback
+        if (text) { panel.textContent = text } else { panel.innerHTML = fallback }
       } catch {
         panel.innerHTML = fallback
       }

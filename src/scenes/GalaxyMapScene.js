@@ -60,12 +60,14 @@ export default class GalaxyMapScene extends Phaser.Scene {
     this.input.keyboard.on('keydown-ENTER', () => this.travel())
     this.input.keyboard.on('keydown-SPACE', () => this.travel())
     this.input.keyboard.on('keydown-C', () => {
+      if (this.registry.get('uiOpen')) return
       import('../ui/Codex.js').then(m =>
         m.openCodex(this.registry.get('lore'), this.registry.get('save'), this.game))
     })
   }
 
   cycle(dir) {
+    if (this.registry.get('uiOpen')) return
     this.selected = (this.selected + dir + this.nodes.length) % this.nodes.length
     this.updateSelection()
   }
@@ -77,6 +79,7 @@ export default class GalaxyMapScene extends Phaser.Scene {
   }
 
   travel() {
+    if (this.registry.get('uiOpen')) return
     if (this.traveling) return
     this.traveling = true
     const node = this.nodes[this.selected]

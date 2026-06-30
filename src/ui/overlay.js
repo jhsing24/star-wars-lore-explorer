@@ -13,7 +13,13 @@ export function openOverlay(node, { game, onClose } = {}) {
   current._onClose = onClose
   if (game) game.registry.set('uiOpen', true)
 
-  const escHandler = (e) => { if (e.key === 'Escape') closeOverlay() }
+  const escHandler = (e) => {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      e.stopPropagation()
+      closeOverlay()
+    }
+  }
   backdrop._escHandler = escHandler
   document.addEventListener('keydown', escHandler)
   return node

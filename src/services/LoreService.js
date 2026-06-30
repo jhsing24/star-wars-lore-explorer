@@ -26,6 +26,12 @@ export function stripHtml(html) {
   return html
     .replace(/<[^>]*>/g, ' ')
     .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
     .replace(/&amp;/g, '&')
     .replace(/\s+/g, ' ')
     .replace(/\s+([.,!?;:])/g, '$1')

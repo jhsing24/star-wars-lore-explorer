@@ -106,7 +106,7 @@ function validateChallengeGeometry(planetId, cid, c, layout, errs) {
   const within = (px, py) =>
     px >= c.bounds.x && px <= c.bounds.x + c.bounds.w &&
     py >= c.bounds.y && py <= c.bounds.y + c.bounds.h
-  if (!c.bounds || !layout?.size) { errs.push(`${planetId}/${cid}: missing bounds/size`); return }
+  if (!c || !c.bounds || !layout?.size) { errs.push(`${planetId}/${cid}: missing bounds/size`); return }
   if (c.bounds.x < 0 || c.bounds.y < 0 ||
       c.bounds.x + c.bounds.w > layout.size.width ||
       c.bounds.y + c.bounds.h > layout.size.height) {
@@ -115,7 +115,8 @@ function validateChallengeGeometry(planetId, cid, c, layout, errs) {
   if (!c.checkpoint || !within(c.checkpoint.x, c.checkpoint.y)) {
     errs.push(`${planetId}/${cid}: checkpoint outside bounds`)
   }
-  if (!c.goal || !within(c.goal.x, c.goal.y)) {
+  if (!c.goal || !within(c.goal.x, c.goal.y) ||
+      !within(c.goal.x + (c.goal.w ?? 0), c.goal.y + (c.goal.h ?? 0))) {
     errs.push(`${planetId}/${cid}: goal outside bounds`)
   }
   for (const h of (c.hazards || [])) {

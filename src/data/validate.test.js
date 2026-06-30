@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { validateLoreEntry, validateLore, validateLayouts } from './validate.js'
+import { validateQuests } from './validate.js'
 
 const good = {
   id: 'char_palpatine',
@@ -92,8 +93,6 @@ describe('validateLayouts', () => {
   })
 })
 
-import { validateQuests } from './validate.js'
-
 describe('validateQuests', () => {
   const byId = new Map([
     ['char_padme_amidala', { id: 'char_padme_amidala' }],
@@ -159,5 +158,26 @@ describe('validateQuests', () => {
   it('flags a missing reward holocron', () => {
     const bad = structuredClone(good); bad[0].reward.holocronLoreId = 'ghost'
     expect(validateQuests(bad, byId, layouts).some(e => e.includes('holocron'))).toBe(true)
+  })
+  it('flags a goal rectangle whose far corner is outside bounds', () => {
+    const bad = structuredClone(layouts)
+    bad.naboo.challenges.naboo_palace.goal = { x: 480, y: 480, w: 60, h: 60 }
+    expect(validateQuests(good, byId, bad).some(e => e.includes('goal'))).toBe(true)
+  })
+  it('flags an enter landmark not on the named planet', () => {
+    const bad = structuredClone(good)
+    bad[0].steps[3].objective.landmarkId = 'lm_not_real'
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('landmark'))).toBe(true)
+  })
+  it('flags a non-numeric maxHealthBonus', () => {
+    const bad = structuredClone(good)
+    bad[0].reward.maxHealthBonus = 'twenty'
+    expect(validateQuests(bad, byId, layouts).some(e => e.includes('maxHealthBonus'))).toBe(true)
+  })
+  it('returns an error (not a throw) for a null challenge value', () => {
+    const bad = structuredClone(layouts)
+    bad.naboo.challenges.zombie = null
+    expect(() => validateQuests(good, byId, bad)).not.toThrow()
+    expect(validateQuests(good, byId, bad).some(e => e.includes('zombie'))).toBe(true)
   })
 })

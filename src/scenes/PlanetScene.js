@@ -3,6 +3,7 @@ import { planetLayouts } from '../data/planetLayouts.js'
 import { factionColor } from '../ui/helpers.js'
 import { createPlayer, updatePlayer } from '../objects/Player.js'
 import { createInteractable } from '../objects/Interactable.js'
+import { nearestInteractable } from '../game/interaction.js'
 
 export default class PlanetScene extends Phaser.Scene {
   constructor() { super('PlanetScene') }
@@ -62,6 +63,13 @@ export default class PlanetScene extends Phaser.Scene {
       if (this.registry.get('uiOpen')) return
       this.scene.start('GalaxyMapScene')
     })
+
+    this._interaction = { nearestInteractable }
+    this.promptText = this.add.text(0, 0, '', { fontFamily: 'monospace', fontSize: '13px', color: '#c8a24a' })
+      .setOrigin(0.5).setDepth(50)
+    this.input.keyboard.on('keydown-E', () => this.tryInteract())
+
+    this._refreshProgress()
   }
 
   update() {
@@ -70,5 +78,48 @@ export default class PlanetScene extends Phaser.Scene {
       return
     }
     updatePlayer(this.player, this.cursors, this.wasd)
+    const near = nearestInteractable({ x: this.player.x, y: this.player.y }, this.interactables, 70)
+    if (near) {
+      this.promptText.setText('Press E').setPosition(near.x, near.y - 28).setVisible(true)
+    } else {
+      this.promptText.setVisible(false)
+    }
+  }
+
+  tryInteract() {
+    if (this.registry.get('uiOpen')) return
+    const { nearestInteractable } = this._interaction
+    const near = nearestInteractable({ x: this.player.x, y: this.player.y }, this.interactables, 70)
+    if (!near) return
+    const save = this.registry.get('save')
+    const lore = this.registry.get('lore')
+    const entry = lore.getEntry(near.def.loreId)
+    const isNew = save.unlockLore(entry)
+    if (isNew) {
+      this._refreshProgress()
+      import('./../ui/DiscoveryToast.js').then(m => m.showToast(entry))
+    }
+    this.dispatchInteraction(near, entry)
+  }
+
+  dispatchInteraction(near, entry) {
+    // type-specific overlays are wired in Tasks 11-14; placeholder until then
+    console.log('interact', near.def.type, entry.id)
+  }
+
+  _refreshProgress() {
+    const save = this.registry.get('save')
+    const total = this.layout.landmarks.length + this.layout.interactables.length
+    const found = this._countFound()
+    save.setPlanetProgress(this.planetId, found, total)
+  }
+
+  _countFound() {
+    const save = this.registry.get('save')
+    const ids = [
+      ...this.layout.landmarks.map(l => l.loreId),
+      ...this.layout.interactables.map(i => i.loreId)
+    ]
+    return ids.filter(id => save.isUnlocked(id)).length
   }
 }

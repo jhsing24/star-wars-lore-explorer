@@ -15,10 +15,14 @@ Open the printed localhost URL.
 - **WASD / Arrow keys** — move (planet surface)
 - **E** — interact (NPCs, terminals, artifacts)
 - **C** — open the codex
+- **J** — open the quest log
 - **Esc** — close an overlay / return to the galaxy map
 
 ## Lore modes
 Codex (browsable encyclopedia), collectible cards (artifacts), holographic terminals, and NPC dialogue. Each entry ships with a curated summary and lazy-loads extended lore from the Wookieepedia API when online; everything is cached and the game is fully playable offline.
+
+## Quests & challenges
+Talk to notable figures to accept **investigation chains** that retrace real prequel storylines across planets. Steps advance through normal discovery plus **traversal challenges** — cross hazard-filled zones (patrol droids, sweeping scanners, lava vents) without your **health bar** hitting zero, or respawn at the last checkpoint. Completing a chain awards an exclusive **holocron** and a permanent max-health boost.
 
 ## Test
 ```

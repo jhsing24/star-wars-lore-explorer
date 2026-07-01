@@ -94,14 +94,14 @@ export const planetLayouts = {
     challenges: {
       naboo_palace: {
         name: 'Royal Palace (Occupied)',
-        bounds: { x: 560, y: 420, w: 520, h: 380 },
-        checkpoint: { x: 600, y: 760 },
-        goal: { x: 980, y: 460, w: 70, h: 70 },
+        bounds: { x: 880, y: 360, w: 620, h: 440 },
+        checkpoint: { x: 930, y: 760 },
+        goal: { x: 1400, y: 400, w: 70, h: 70 },
         hazards: [
-          { type: 'patrol', x: 700, y: 500, w: 34, h: 34, damage: 18, speed: 130, axis: 'y', range: 240 },
-          { type: 'patrol', x: 880, y: 700, w: 34, h: 34, damage: 18, speed: 110, axis: 'x', range: 260 },
-          { type: 'sweep',  x: 800, y: 600, length: 220, damage: 30, speed: 70 },
-          { type: 'static', x: 760, y: 440, w: 60, h: 60, damage: 10 }
+          { type: 'patrol', x: 1050, y: 460, w: 34, h: 34, damage: 18, speed: 130, axis: 'y', range: 200 },
+          { type: 'patrol', x: 1220, y: 700, w: 34, h: 34, damage: 18, speed: 110, axis: 'x', range: 200 },
+          { type: 'sweep',  x: 1140, y: 580, length: 200, damage: 30, speed: 70 },
+          { type: 'static', x: 980, y: 420, w: 60, h: 60, damage: 10 }
         ]
       }
     }
@@ -206,14 +206,14 @@ export const planetLayouts = {
     challenges: {
       geonosis_foundry: {
         name: 'Droid Foundry Line',
-        bounds: { x: 540, y: 440, w: 540, h: 360 },
-        checkpoint: { x: 580, y: 760 },
-        goal: { x: 1000, y: 480, w: 70, h: 70 },
+        bounds: { x: 880, y: 360, w: 620, h: 440 },
+        checkpoint: { x: 930, y: 760 },
+        goal: { x: 1400, y: 400, w: 70, h: 70 },
         hazards: [
-          { type: 'patrol', x: 720, y: 520, w: 44, h: 44, damage: 22, speed: 160, axis: 'x', range: 300 },
-          { type: 'patrol', x: 900, y: 700, w: 44, h: 44, damage: 22, speed: 140, axis: 'y', range: 220 },
-          { type: 'static', x: 660, y: 660, w: 80, h: 40, damage: 16 },
-          { type: 'static', x: 860, y: 500, w: 40, h: 80, damage: 16 }
+          { type: 'patrol', x: 1180, y: 480, w: 44, h: 44, damage: 22, speed: 160, axis: 'x', range: 200 },
+          { type: 'patrol', x: 1280, y: 700, w: 44, h: 44, damage: 22, speed: 140, axis: 'y', range: 100 },
+          { type: 'static', x: 1000, y: 620, w: 80, h: 40, damage: 16 },
+          { type: 'static', x: 1240, y: 460, w: 40, h: 80, damage: 16 }
         ]
       }
     }
@@ -303,14 +303,14 @@ export const planetLayouts = {
     challenges: {
       mustafar_lava: {
         name: 'Lava Field Crossing',
-        bounds: { x: 540, y: 440, w: 560, h: 360 },
-        checkpoint: { x: 580, y: 760 },
-        goal: { x: 1020, y: 480, w: 70, h: 70 },
+        bounds: { x: 880, y: 360, w: 620, h: 440 },
+        checkpoint: { x: 930, y: 760 },
+        goal: { x: 1400, y: 400, w: 70, h: 70 },
         hazards: [
-          { type: 'static', x: 680, y: 560, w: 90, h: 90, damage: 14 },
-          { type: 'static', x: 860, y: 660, w: 90, h: 90, damage: 14 },
-          { type: 'sweep',  x: 800, y: 560, length: 260, damage: 34, speed: 60 },
-          { type: 'patrol', x: 940, y: 720, w: 34, h: 34, damage: 20, speed: 150, axis: 'y', range: 200 }
+          { type: 'static', x: 1020, y: 500, w: 90, h: 90, damage: 14 },
+          { type: 'static', x: 1220, y: 620, w: 90, h: 90, damage: 14 },
+          { type: 'sweep',  x: 1140, y: 560, length: 220, damage: 34, speed: 60 },
+          { type: 'patrol', x: 1320, y: 700, w: 34, h: 34, damage: 20, speed: 150, axis: 'y', range: 80 }
         ]
       }
     }

@@ -1,11 +1,17 @@
 import { openOverlay, closeOverlay } from './overlay.js'
 import { factionColor } from './helpers.js'
 
-export function openDialogue(def, entry, game) {
+export function openDialogue(def, entry, game, opts = {}) {
+  const { questService, planet } = opts
+  const offered = (questService && planet)
+    ? questService.availableFrom(planet, def.loreId)
+    : null
+
   const panel = document.createElement('div')
   panel.className = 'panel dialogue'
   const hex = '#' + factionColor(def.faction).toString(16).padStart(6, '0')
   const lines = [...def.lines, `「 Lore unlocked: ${entry.title} 」\n${entry.summary}`]
+  if (offered) lines.push(`「 New quest available 」\n${offered.title} — ${offered.summary}`)
   let idx = 0
 
   panel.innerHTML = `
@@ -17,13 +23,22 @@ export function openDialogue(def, entry, game) {
 
   const lineEl = panel.querySelector('.dialogue-line')
   const nextBtn = panel.querySelector('.dialogue-next')
+  const onLast = () => idx >= lines.length - 1
 
   const render = () => {
     lineEl.textContent = lines[idx]
-    nextBtn.textContent = idx >= lines.length - 1 ? 'Close ✕' : 'Next ▸'
+    if (onLast()) nextBtn.textContent = offered ? 'Accept Quest ✦' : 'Close ✕'
+    else nextBtn.textContent = 'Next ▸'
   }
   nextBtn.addEventListener('click', () => {
-    if (idx >= lines.length - 1) { closeOverlay(); return }
+    if (onLast()) {
+      if (offered) {
+        questService.accept(offered.id)
+        import('./DiscoveryToast.js').then(m => m.showToast({ title: `Quest accepted: ${offered.title}` }))
+      }
+      closeOverlay()
+      return
+    }
     idx++; render()
   })
   render()

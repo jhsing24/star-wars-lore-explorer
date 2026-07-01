@@ -8,7 +8,7 @@ export default class GalaxyMapScene extends Phaser.Scene {
   create() {
     const save = this.registry.get('save')
     this.add.text(40, 30, 'GALAXY MAP', { fontFamily: 'monospace', fontSize: '28px', color: '#c8a24a' })
-    this.add.text(40, 66, 'Arrow keys: select system   Enter: travel   C: codex',
+    this.add.text(40, 66, 'Arrow keys: select system   Enter: travel   C: codex   J: quests',
       { fontFamily: 'monospace', fontSize: '14px', color: '#5b6472' })
 
     const lore = this.registry.get('lore')
@@ -64,6 +64,22 @@ export default class GalaxyMapScene extends Phaser.Scene {
       import('../ui/Codex.js').then(m =>
         m.openCodex(this.registry.get('lore'), this.registry.get('save'), this.game))
     })
+
+    // quest log
+    this.input.keyboard.on('keydown-J', () => {
+      if (this.registry.get('uiOpen')) return
+      import('../ui/QuestLog.js').then(m => m.openQuestLog(this.registry.get('quests'), this.game))
+    })
+
+    // marker on the planet that holds the tracked objective
+    const quests = this.registry.get('quests')
+    const obj = quests.trackedObjective()
+    const targetPlanet = obj && obj.planet ? obj.planet : null
+    if (targetPlanet && planetLayouts[targetPlanet]) {
+      const p = planetLayouts[targetPlanet].galaxyPos
+      const ring = this.add.circle(p.x, p.y, 20, 0xc8a24a, 0).setStrokeStyle(2, 0xc8a24a, 0.9)
+      this.tweens.add({ targets: ring, scale: 1.6, alpha: 0.2, duration: 800, yoyo: true, repeat: -1 })
+    }
   }
 
   cycle(dir) {
